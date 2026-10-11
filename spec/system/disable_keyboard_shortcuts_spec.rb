@@ -22,7 +22,7 @@ RSpec.describe "Disable keyboard shortcuts" do
 
   it "keeps ctrl+alt+f opening search" do
     visit "/latest"
-    page.send_keys(%i[control alt f])
+    page.send_keys([:control, :alt, "f"])
     expect(page).to have_css(".search-menu .search-term__input")
   end
 end
