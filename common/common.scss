@@ -1,0 +1,5 @@
+// The help modal would list keys that no longer do anything.
+.sidebar-footer-actions .sidebar-footer-actions-keyboard-shortcuts,
+.dropdown-menu .shortcut {
+  display: none;
+}

@@ -1,0 +1,75 @@
+import { apiInitializer } from "discourse/lib/api";
+
+// Mirrors core's DEFAULT_BINDINGS (services/keyboard-shortcuts.js) minus the
+// ones kept on purpose: ctrl+alt+f, mod+p (print), shift+f11 and o/enter.
+const DISCOURSE_ONLY_SHORTCUTS = [
+  "!",
+  "#",
+  "/",
+  "=",
+  "?",
+  ".",
+  "a",
+  "b",
+  "c",
+  "shift+c",
+  "command+left",
+  "command+[",
+  "command+right",
+  "command+]",
+  "d",
+  "e",
+  "end",
+  "command+down",
+  "f",
+  "g h",
+  "g l",
+  "g n",
+  "g u",
+  "g y",
+  "g c",
+  "g t",
+  "g b",
+  "g p",
+  "g m",
+  "g d",
+  "g s",
+  "g j",
+  "g k",
+  "home",
+  "command+up",
+  "j",
+  "k",
+  "l",
+  "m m",
+  "m r",
+  "m t",
+  "m w",
+  "tab",
+  "p",
+  "q",
+  "r",
+  "s",
+  "shift+j",
+  "shift+k",
+  "shift+p",
+  "shift+r",
+  "shift+s",
+  "shift+l",
+  "shift+z shift+z",
+  "shift+u",
+  "shift+a",
+  "shift+b",
+  "t",
+  "u",
+  "x",
+  "shift+d",
+];
+
+export default apiInitializer((api) => {
+  // The service is already built by the time themes run, so the core
+  // disableDefaultKeyboardShortcuts API (read at construction) is too late.
+  api.container
+    .lookup("service:keyboard-shortcuts")
+    .pause(DISCOURSE_ONLY_SHORTCUTS);
+});

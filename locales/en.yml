@@ -1,0 +1,3 @@
+en:
+  theme_metadata:
+    description: "Turns off Discourse's own keyboard shortcuts (j/k, ?, g-sequences). Browser, OS and composer keys keep working."

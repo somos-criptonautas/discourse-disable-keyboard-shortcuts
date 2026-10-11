@@ -1,0 +1,3 @@
+es:
+  theme_metadata:
+    description: "Desactiva los atajos de teclado propios de Discourse (j/k, ?, secuencias con g). Las teclas del navegador, del sistema y del editor siguen funcionando."

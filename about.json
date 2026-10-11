@@ -1,0 +1,9 @@
+{
+  "name": "Disable Keyboard Shortcuts",
+  "component": true,
+  "authors": "Criptonautas",
+  "about_url": "https://github.com/somos-criptonautas/discourse-disable-keyboard-shortcuts",
+  "license_url": "https://github.com/somos-criptonautas/discourse-disable-keyboard-shortcuts/blob/main/LICENSE",
+  "learn_more": "https://meta.discourse.org/t/installing-a-theme-or-theme-component/63682",
+  "theme_version": "1.0.0"
+}
